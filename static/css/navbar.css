@@ -1,0 +1,90 @@
+@import url("fonts.css");
+
+
+body {
+    overflow: overlay;
+}
+
+#mainnavbar
+{
+    /* background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%) !important; */
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}
+#mainnavbar.scrolled
+{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    opacity: 0.5;
+}
+#searchbox
+{
+    width:15em;
+    margin-left: 2em;
+}
+#logout
+{
+    color:white;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+
+.navbar-toggler
+{
+    background-color: white;
+}
+@media screen and (min-width:600px)
+{
+#logout
+{
+    position:absolute;
+    right: 1%;
+    color:peachpuff;
+} 
+}
+.navbar-brand
+{
+    color: aliceblue !important ; 
+    font-family: "Archivo", sans-serif;
+}
+.navilinks li a{
+    margin-left: 1em;
+    margin-right: 1em;
+    color: aliceblue !important;
+
+}
+div.dropdown-menu a
+{
+    color:black !important;
+}
+.dropdown-item
+{
+    margin-left:0px !important;
+}
+#navbarNavDropdown .nav-link li a:hover
+{
+    font-size: 1.15em;
+    transition-duration:5ms ;
+    background-color: white;
+    opacity: 0.3;
+    color:black;
+}
+
+
+/* SCROLLBAR TRANSPARENT */
+::-webkit-scrollbar {
+    width: 10px;
+  } 
+   
+  ::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90, 0.4);
+  }
+    
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.089);
+  }

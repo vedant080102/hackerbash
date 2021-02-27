@@ -1,0 +1,90 @@
+@import url("font.css");
+
+body{
+    color: white;
+    font-family: 'Varela Round';
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    /* height: 100vh; */
+    background-size: cover;
+    background-attachment: fixed;
+    /* overflow: overlay; */
+  }
+  
+  .scroll-pre {
+    height: 90px;
+    width: 100%;
+    background-color: inherit;
+  }
+  
+  .form {
+    width: 432px;
+    /* float: right; */
+    background: #64646473;
+    padding: 10px 30px;
+    margin-top: 10em;
+    margin-bottom: 3em;
+    margin-left: 35em;
+  }
+  
+  label {
+    font-size: 18px;
+    color: #92897a;
+  }
+  
+  .input {
+    width: 100%;
+    margin: 8px 0px 0px 0px;
+    /* padding: 0px 1px; */
+    /* display: inline-block; */
+    /* box-sizing: border-box; */
+    background-color: transparent;
+    border-block-style: none;
+    border-bottom-style: groove;
+    border-inline: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Adobe Clean';
+  }
+  
+  input:focus {
+    outline: none;
+    border-bottom-style: double;
+    border-color: #e9ecef;
+  }
+  
+  h1 {
+    font-family: 'Varela Round';
+    font-size: 50px;
+    color: white;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: dodgerblue;
+  }
+
+  .link:hover {
+    color: #468faf;
+    text-decoration: none;
+  }
+  
+  #submit {
+    background-color: transparent;
+    color: #e9ecef;;
+    padding: 14px 20px;
+    margin-left: 90px;
+    border: 1px solid;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 100px;
+    font-family: 'Varela Round';
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #submit:hover {
+    color: white;
+    background-color: #5390d9;
+    transition: all 0.4s ease 0s;
+  }

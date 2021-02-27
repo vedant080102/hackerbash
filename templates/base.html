@@ -1,0 +1,62 @@
+{% load static %}
+<!-- <header> -->
+
+    <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="/static/css/navbar.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+{% block content %}
+{% endblock content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3 px-4" id="mainnavbar">
+    <a class="navbar-brand" href="#">
+        <p class="logo-1">JJM</p>
+    </a>
+
+    <form>
+        <input type="search" id="searchbox" placeholder="What are you looking for?">
+        <button>Search</button>
+    </form>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-2 navilinks">
+            <li class="nav-item active">
+                <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cart">Cart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Comedy</a>
+                    <a class="dropdown-item" href="#">Horror</a>
+                </div>
+            </li>
+            <a class="nav-link" id="logout" href="/accounts/login">Login</a>
+        </ul>
+    </div>
+</nav>
+
+
+{% block tail %}
+{% endblock tail %}
+
+
+<footer>
+    </body>
+</html>
+</footer>
