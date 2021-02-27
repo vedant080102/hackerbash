@@ -1,10 +1,5 @@
 @import url("fonts.css");
 
-body {
-    font-family: 'Montserrat';
-    font-weight: 400;
-}
-
 header
 {
     position: relative;
@@ -16,6 +11,16 @@ header
     -webkit-background-size: cover;
     /* background-attachment: fixed; */
     overflow: overlay; 
+}
+
+body {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzR8fGJvb2t8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-attachment: fixed;
+  background-size: cover;
+    background-position: center center;
+    -webkit-background-size: cover;
 }
 
 :root {
@@ -65,12 +70,11 @@ header
 * { box-sizing:border-box; }
 
 div.carousell {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzR8fGJvb2t8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
     background-size: cover;
-    background-attachment: fixed; 
+    
     overflow: overlay; 
     color:#fff;
-    height:200vh;
+    height: 100vh;
 }
 
 img { background-color:#fff; padding:5px;}
@@ -174,3 +178,15 @@ a{
 .cascade-slider_dot:hover { background: #555; }
 
 .cascade-slider_dot.cur { background: #555; }
+
+#temp {
+  background: url("images/read.jpg");
+  background-size: cover;
+  background-position: center center;
+  -webkit-background-size: cover;
+  height: 100vh;
+}
+
+#fil {
+  height: 100vh;
+}
