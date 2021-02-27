@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from orders.views import bookItems
 
 # Create your views here.
 
@@ -9,4 +10,5 @@ def home1(request):
     return redirect('/home')
 
 def book(request):
-    return render(request,'books.html')
+    bk=bookItems()
+    return render(request,'books.html',{"bk":bk})
