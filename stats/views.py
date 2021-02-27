@@ -8,3 +8,5 @@ def home(request):
 def home1(request):
     return redirect('/home')
 
+def book(request):
+    return render(request,'books.html')

@@ -8,13 +8,13 @@ background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+
 
     
 }
-#mainnavbar.scrolled
+/*#mainnavbar.scrolled
 {
-    background: #0F2027;  /* fallback for old browsers */
+    background: #0F2027;   fallback for old browsers 
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    opacity: 0.5;
-}
+    /* background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    opacity: 0.5; 
+}*/
 #searchbox
 {
     width:15em;
@@ -28,11 +28,13 @@ background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+
 } 
 header
 {
-    position: sticky;
+    position: relative;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1598736769671-5170487f5588?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTg1fHxib29rfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
     background-size: cover;
+    background-position: center center;
+    -webkit-background-size: cover;
     /* background-attachment: fixed; */
     overflow: overlay; 
 }
@@ -68,16 +70,19 @@ div.dropdown-menu a
 {
     margin-left:0px !important;
 }
-#navbarNavDropdown .nav-link li a:hover
+.navbar-brand:hover
 {
-    font-size: 1.15em;
-    transition-duration:5ms ;
-    background-color: white;
-    opacity: 0.3;
-    color:black;
+    transform: scale3d(1.2, 1.2, 0.3) !important;
+    
+}
+#navbarNavDropdown a:hover
+{
+    transform: scale3d(1.2, 1.2, 0.3) !important;
+   
+    
 }
 :root {
-    --shadow-color:#920d0f;
+    --shadow-color:#6d597a;
     --shadow-color-light:#3e1f47;
     /* #FF9E9E #ffcbf2 */
   }
@@ -125,98 +130,43 @@ div.dropdown-menu a
     }
   }
   * { box-sizing:border-box; }
-
-div.carousell { background-color:#222; color:#fff;}
-
-img { background-color:#fff; padding:5px;}
-
-.cascade-slider_container {
-  position: relative;
-  width: 90%;
-  height: 700px;
-  margin: 0 auto;
-  padding:0 50px;
-  margin-top: 0em;
-  
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzR8fGJvb2t8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+    background-attachment: fixed; 
+    overflow: overlay; 
 }
 
-.cascade-slider_item {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%) perspective(300px) rotateX(0deg) rotateY(0deg) scale(.4);
-;
-  transition: all 3s ease-in;
-  opacity: 0;
-  z-index: -1;
-}
-
-.cascade-slider_item.next {
-  left: 50%;
-  transform: translateY(-50%) translateX(-150%) perspective(300px) rotateX(0deg) rotateY(-27deg) scale(.8);
-;
-  opacity: 1;
-  z-index: 1;
-}
-
-.cascade-slider_item.prev {
-  left: 50%;
-  transform: translateY(-50%) translateX(50%) perspective(300px) rotateX(0deg) rotateY(27deg) scale(.8);
-;
-  opacity: 1;
-  z-index: 1;
-}
-
-.cascade-slider_item.now {
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%) perspective(300px) rotateX(0deg) rotateY(0deg) scale(1);
-;
-  opacity: 1;
-  z-index: 5;
-}
-
-.cascade-slider_arrow {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
-  z-index: 5;
-}
-
-.cascade-slider_arrow-left { left: 0; }
-
-.cascade-slider_arrow-right { right: 0; }
-
-.cascade-slider_nav {
-  position: absolute;
-  bottom: -120px;
-  width: 100%;
-  text-align: center;
-  z-index: 5;
-}
-
-.cascade-slider_dot {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin: 1em;
-  background: #ddd;
-  list-style: none;
-  cursor: pointer;
-}
-
-.cascade-slider_dot:hover { background: #555; }
-
-.cascade-slider_dot.cur { background: #555; }
-
-#ContactUs
+.bookscont
 {
-    margin-top: 7em;
-    width:100%;
-    height:auto;
-    background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    position: relative;
+
+    left:10em;
+    top: 7.5em;
     
 }
+.bookscont h5{
+    position: relative;
+    top:5em;
+}
+.cont
+{
+    margin: 2%;
+    height: 15em;
+    border: 3px solid peru;
+    
+}
+ @media screen and (min-width:576px)
+{
+.naviglinks
+{
+    display: inline-flex;
+    position: absolute;
+    top: 7.5em;
+    width:5em;
+    height:15em;
+    margin-left: 1em;
+    background-color: white;
+}
+} 
