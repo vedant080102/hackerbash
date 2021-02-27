@@ -1,22 +1,14 @@
-{%load static%}
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% load static %}
 
-<head>
+{% block content %}
+
     <title>Cart</title>
 </head>
-
 <body>
-    <h1>Shopping Cart</h1>
-    <a href="/home">Home</a>
-    {% if us %}
-    <a class="navi" href="/accounts/login">
-        <li>{{us.email}} LOGOUT</li>
-    {% else %}
-    <a class="navi" href="/accounts/login">
-        <li>LOGIN</li>
-    {% endif %}
-    <a href="/accounts/signup">Sign up</a>
-</body>
+    <header>
+        {% endblock content %}
+        {% block tail %}
+    </header>
 
-</html>
+{% endblock tail %}

@@ -5,9 +5,8 @@ from firebase_admin import firestore
 
 db=firestore.client()
 
-docs = db.collection(u'books').stream()
-
 def bookItems():
+    docs = db.collection(u'books').stream()
     books=[]
     for doc in docs:
         books.append(doc.to_dict())

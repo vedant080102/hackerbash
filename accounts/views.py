@@ -47,7 +47,7 @@ def login(request):
         session_id=user['idToken']
         request.session['uid']=str(session_id)
         us=authe.current_user
-        return render(request, "cart.html",{"e":email,"us":us})
+        return render(request, "home.html",{"e":email,"us":us})
     else:
         us=authe.current_user
         return render(request, "login.html",{"us":us})
@@ -70,9 +70,17 @@ def signup(request):
             display_name=name,        
             disabled=False)
             user = authe.sign_in_with_email_and_password(email,password)
-            return redirect('/cart')
+            return redirect('/accounts/cart')
         except:
             return redirect('/accounts/signup')
     else:    
         us=authe.current_user
         return render(request,'signup.html',{"us":us})
+
+def logout(request):
+    
+    authe.current_user=None
+    return redirect('/home')
+
+def curuser():
+    return authe.current_user

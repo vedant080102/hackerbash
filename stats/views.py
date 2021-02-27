@@ -12,3 +12,10 @@ def home1(request):
 def book(request):
     bk=bookItems()
     return render(request,'books.html',{"bk":bk})
+
+def iBook(request,name):
+    books=bookItems()
+    print(type(books))
+    for j in books:
+        print(j)
+    return render(request,'iBook.html',{"bkn":bkn})
