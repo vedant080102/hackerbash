@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/book.css">
+        <title>Explore</title>
+    </head>
+
+    <body>
+        
+        <header>
+            {% endblock content %}
+            {% block tail %}
+        </header>
+
+        <div class="naviglinks">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>Genres</h2>
+                        <ul>
+                            <li>Adventure novel</li>
+                            <li>Autobiography</li>
+                            <li>Children's literature</li>
+                            <li>Cyberprunk</li>
+                            <li>Epistolary novel</li>
+                            <li>Fantasy</li>
+                            <li>Fiction</li>
+                            <li>Gothic Fiction</li>
+                            <li>Historical Fiction</li>
+                            <li>Mystery</li>
+                            <li>Parody</li>
+                            <li>Philosophy</li>
+                            <li>Religious text</li>
+                            <li>Satire</li>
+                            <li>Science Fiction</li>
+                            <li>Speculative Fiction</li>
+                            <li>War novel</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h2>Authors</h2>
+                        <ul>
+                            <li>Agatha Christie</li>
+                            <li>Albert Camus</li>
+                            <li>Anthony Burgess</li>
+                            <li>Bram Stoker</li>
+                            <li>Chris Pratt</li>
+                            <li>Dalton Trumbo</li>
+                            <li>Daniel Dennett</li>
+                            <li>Dorothy L. Sayers</li>
+                            <li>Douglas Coupland</li>
+                            <li>Erich Maria Remarque</li>
+                            <li>Frank Herbert</li>
+                            <li>Franz Kafka</li>
+                            <li>George Orwell</li>
+                            <li>Herman Melville</li>
+                            <li>J. K. Rowling</li>
+                            <li>J. Meade Falkner</li>
+                            <li>J. R. R. Tolkien</li>
+                            <li>J.G.Ballard</li>
+                            <li>John Irving</li>
+                            <li>Joseph Conrad</li>
+                            <li>K. W. Jeter</li>
+                            <li>Kim Stanley Robinson</li>
+                            <li>Lynn Flewelling</li>
+                            <li>Margaret Mitchell</li>
+                            <li>Mark Twain</li>
+                            <li>Miguel de Cervantes</li>
+                            <li>Ray Bradbury</li>
+                            <li>Richard Aldington</li>
+                            <li>Roald Dahl</li>
+                            <li>Sheridan Le Fanu</li>
+                            <li>Ursula K. Le Guin</li>
+                            <li>Vernor Vinge</li>
+                            <li>Voltaire</li>
+                            <li>Walter Scott</li>
+                            <li>William Gibson</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container bookscont px-4">
+            <div class="row gx-5 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                {% for book in bk %}
+                <div class="inner_card">
+                    <div class="col bg-light p-3 cont">
+                        <h5><a href="iBook/{{book.Bname}}">{{book.Bname}}</a></h5>
+                        <h6>Author: {{book.Author}}</h6>
+                        <h6>Price: ${{book.Price}}</h6>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    <script src="/static/js/home.js"></script>
+
+{% endblock tail %}
