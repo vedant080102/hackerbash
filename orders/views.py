@@ -19,3 +19,11 @@ def retBook():
     for doc in docs1:
         bks.append(doc.to_dict())
     return bks
+
+def retCart():
+    docs1 = db.collection(u'books').stream()
+    print(type(docs1))
+    bks=[]
+    for doc in docs1:
+        bks.append(doc.to_dict())
+    return bks

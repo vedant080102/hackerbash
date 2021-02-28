@@ -1,8 +1,10 @@
-{%load static%}
-<!DOCTYPE html>
-<html lang="en">
+<!-- PAGE FOR INDIVIDUAL BOOKS -->
 
-<head>
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,69 +15,82 @@
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/css/iBook.css">
     <title>Book</title>
+
+    <script src="/static/js/cart.js"></script>
+
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3 px-4" id="mainnavbar">
-        <a class="navbar-brand" href="#">
-            <p class="logo-1">
-                JJM
-            </p>
-        </a>
+    <header>
+        {% endblock content %}
+        {% block tail %}
+    </header>
 
-        <form>
-
-            <input type="search" id="searchbox" placeholder="What are you looking for?">
-            <button>Search</button>
-
-        </form>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mx-2 navilinks">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/accounts/cart">Cart</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Categories
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Comedy</a>
-                        <a class="dropdown-item" href="#">Horror</a>
-                    </div>
-                </li>
-                <a class="nav-link" id="logout" href="#">Logout</a>
-            </ul>
-
-        </div>
-    </nav>
     <div class="container bg-light py-3 " id="books">
         <div class="row">
             <div class="col-12 col-md-5">
                 <div class="row">
-                    <div class="col-12 pic">
+                    <div class="col-12 pic bkname">
                         <h2>{{bkn}}</h2>
                     </div>
                     <div class="col-12">
-                        <h4>Author Name:<a>{{bka}}</a></h4>
-                        <h4>Genre:<a>{{bkg}}</a></h4>
-                        <h4>Price:<a>{{bkp}}</a></h4>
+                        <h4>Author Name:{{bka}}</h4>
+                        <h4>Genre:{{bkg}}</h4>
+                        <h4>Price:{{bkp}}</h4>
                     </div>
                     <div class="col-12">
-                        <button>Add to cart</button>
-                        <button>Buy Now</button>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" onclick=AddtoCart()>
+                            Add to Cart
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary mr-auto">Save changes</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            Buy Now
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary mr-auto">Save changes</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,50 +100,4 @@
             </div>
         </div>
     </div>
-    <footer id="ContactUs">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg">
-                    <h3>About Us</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam iusto veritatis fugiat ipsa
-                        saepe, vitae quasi sed nemo odit reiciendis adipisci nulla minima. Minus delectus esse iste?
-                        Sapiente, possimus necessitatibus.</p>
-                </div>
-                <div class="col-lg ">
-                    <h3>Contact Us</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero eligendi officia voluptate
-                        veniam accusantium ipsum facere provident saepe. Vel impedit animi iste dolore quam ipsum ea
-                        libero porro incidunt eum.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-</script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-</script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
-</script>
-<script>
-    $(function () {
-        $(document).scroll(function () {
-            var $nav = $("#mainnavbar");
-            $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-        });
-
-    });
-</script>
-
-</html>
+{% endblock tail %}

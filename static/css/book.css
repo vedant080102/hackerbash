@@ -75,8 +75,12 @@ body{
 
 .bookscont h5{
     position: relative;
-    top:3rem;
-    margin-bottom: 1em;
+    top: 2rem;
+    margin-bottom: 3em;
+}
+
+.bookscont h5, h6 {
+    text-align: center;
 }
 
 .cont
@@ -107,7 +111,7 @@ body{
         position: absolute;
         top: 9em;
         width:20rem;
-        height:40em;
+        height: auto;
         margin-left: 1em;
         background-color: white;
         border: 3px solid #6d597a;

@@ -6,4 +6,5 @@ urlpatterns=[
     path('home',views.home,name="home"),
     path('book',views.book,name="book"),
     path('iBook/<str:name>/',views.iBook,name="iBook"),
+    path('search',views.search,name="search")
     ]
