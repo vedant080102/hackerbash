@@ -4,5 +4,6 @@ from . import views
 urlpatterns=[
     path('',views.home1,name="default"),
     path('home',views.home,name="home"),
-    path('xplor',views.xplor,name="xplor")
-]
+    path('book',views.book,name="book"),
+    path('iBook/<str:name>/',views.iBook,name="iBook"),
+    ]

@@ -5,7 +5,7 @@ header
     position: relative;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1598736769671-5170487f5588?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTg1fHxib29rfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images5.alphacoders.com/659/thumb-1920-659155.jpg");
     background-size: cover;
     background-position: center center;
     -webkit-background-size: cover;
@@ -16,7 +16,7 @@ header
 body {
   font-family: 'Montserrat';
   font-weight: 400;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzR8fGJvb2t8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images4.alphacoders.com/810/810873.jpg");
   background-attachment: fixed;
   background-size: cover;
     background-position: center center;
@@ -189,4 +189,8 @@ a{
 
 #fil {
   height: 100vh;
+}
+
+h3 {
+  text-align: center;
 }
