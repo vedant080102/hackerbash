@@ -208,3 +208,14 @@ header h1
    -webkit-text-stroke: 1px black;
    font-weight: bold;
 }
+
+body h2
+{
+    position: relative;
+   top: 35%;
+   color: #fff;
+   left: auto;
+   margin-left: 1em;
+   margin-right: 1em;
+   text-align: center;
+}
