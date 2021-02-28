@@ -1,14 +1,93 @@
-{%load static%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Home Page</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
-</head>
-<body>
-    <h1>Home Page</h1>
-    <a href="/accounts/login">Login</a>
-    <a href="/accounts/cart">Cart</a>
-    <a href="/accounts/signup">Sign up</a>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+    </head>
+
+    <body>
+        <header>
+            {% endblock content %}
+            {% block tail %}
+        </header>
+        
+        <div class="carousell">
+            <div class="cascade-slider_container " id="cascade-slider">
+                <div class="cascade-slider_slides">
+                    <a href="/iBook/Animal%20farm/">
+                        <div class="cascade-slider_item">
+                            <h3>Animal Farm</h3>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Animal_Farm_-_1st_edition.jpg/330px-Animal_Farm_-_1st_edition.jpg"
+                                width="300px" height="400px" alt="Animal Farm">
+                        </div>
+                    </a>
+                    <a href="iBook/A%20Clockwork%20Orange/">
+                        <div class="cascade-slider_item">
+                            <h3>A Clockwork Orange</h3>
+                            <img src="https://duckduckgo.com/i/305281cc.jpg" width="300px"
+                                height="400px" alt="A Clockwork Orange">
+                        </div>
+                    </a>
+                    <a href="/iBook/The%20Plague/">
+                        <div class="cascade-slider_item">
+                            <h3>The Plague</h3>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/La_Peste_book_cover.jpg/330px-La_Peste_book_cover.jpg"
+                                width="300px" height="400px" alt="The Plague">
+                        </div>
+                    </a>
+                    <a href="/iBook/Dune%20Messiah/">
+                        <div class="cascade-slider_item">
+                            <h3>Dune Messiah</h3>
+                            <img src="https://duckduckgo.com/i/ec47cbf6.jpg" width="300px" height="400px" alt="Dune Messiah">
+                        </div>
+                    </a>
+                    <a href="/iBook/Blade%20Runner%202:%20The%20Edge%20of%20Human/">
+                        <div class="cascade-slider_item">
+                            <h3>Blade Runner 2</h3>
+                            <img src="https://upload.wikimedia.org/wikipedia/en/c/c0/Blade_Runner_2_The_Edge_of_Human_KW_Jeter_cover.jpg"
+                                width="300px" height="400px" alt="Blade Runner 2: The Edge of Human">
+                        </div>
+                    </a>
+                    <a href="/iBook/Fahrenheit%20451/">
+                        <div class="cascade-slider_item">
+                            <h3>Farenheit 451</h3>
+                            <img src="https://duckduckgo.com/i/efd10c65.jpg" width="300px" height="400px" alt="Farenheit 451">
+                        </div>
+                    </a>
+                    <a href="/iBook/The%20Trial/">
+                        <div class="cascade-slider_item">
+                            <h3>The Trial</h3>
+                            <img src="https://duckduckgo.com/i/149b3569.jpg" width="300px" height="400px" alt="The Trial">
+                        </div>
+                    </a>
+                    <centre>
+                        <ol class="cascade-slider_nav">
+                            <li class="cascade-slider_dot"></li>
+                            <li class="cascade-slider_dot"></li>
+                            <li class="cascade-slider_dot"></li>
+                            <li class="cascade-slider_dot"></li>
+                            <li class="cascade-slider_dot"></li>
+                            <li class="cascade-slider_dot"></li>
+                        </ol>
+                    </centre>
+                </div>
+    
+                <span class="cascade-slider_arrow cascade-slider_arrow-left" style="font-size: xx-large;" data-action="prev"><</span>
+                <span class="cascade-slider_arrow cascade-slider_arrow-right" style="font-size: xx-large;" data-action="next">></span>
+            </div>
+        </div>
+    
+        <div id="fil">
+            
+        </div>
+    <script src="/static/js/home.js"></script>
+    
+{% endblock tail %}
